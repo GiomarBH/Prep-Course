@@ -61,7 +61,6 @@ function dePalabrasAFrase(palabras) {
   // Tu código:
   //var oracion="";
  return palabras.join(" ");
-
 }
 
 
