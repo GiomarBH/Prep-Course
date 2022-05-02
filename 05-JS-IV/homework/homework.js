@@ -84,6 +84,7 @@ function tienePropiedad (objeto, propiedad ) {
   // Tu código:
   //if(objeto[propiedad] !== undefined){} 
   //if (objeto.key == objeto['propiedad']) return true;
+ 
   if (objeto[propiedad]) return true;
   return false;
   
