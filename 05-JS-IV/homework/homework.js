@@ -31,9 +31,7 @@ function invocarMetodo (objeto, metodo) {
   // Invoca ese método
   // Nada necesita ser devuelto ("returned")
   // Tu código:
-  objeto.metodo= function(){
-  }
-
+  objeto[metodo]();
 }
 
 function multiplicarNumeroDesconocidoPorCinco (objetoMisterioso) {
@@ -79,30 +77,27 @@ function tieneEmail (usuario) {
 
 }
 
-function tienePropiedad (objeto, propiedad) {
+function tienePropiedad (objeto, propiedad ) {
   // Devuelve "true" si el objeto (parámetro "objeto") tiene una propiedad (key) cuyo nombre es igual al valor del argumento "propiedad"
   // "propiedad" es un string
   // De lo contrario, devuelve "false"
   // Tu código:
   //if(objeto[propiedad] !== undefined){} 
-  if (objeto.key === propiedad) return true
-  return false
-
-
+  //if (objeto.key == objeto['propiedad']) return true;
+  if (objeto[propiedad]) return true;
+  return false;
+  
 
 }
+
 
 function verificarPassword (usuario, password) {
   // Comprueba si la "password" enviada coincide con la propiedad "password" del objeto "usuario"
   // Devuelve "true" si coinciden
   // De lo contrario, devuelve "false"
   // Tu código:
-  if( string(this.password) === string(password) ) {
-  return true;
-  }
-  else{
+  if( usuario.password == password) return true;
   return false;
-  }
 }
 
 function actualizarPassword (usuario, nuevaPassword) {
@@ -111,7 +106,7 @@ function actualizarPassword (usuario, nuevaPassword) {
   // Tu código:
   //usuario = nuevagPassword;
   //return usuario;
-  usuario = nuevagPassword;
+  usuario['password'] = nuevaPassword;
   return usuario;
 }
 
