@@ -133,28 +133,26 @@ function buscoInterseccion(arreglo1, arreglo2){
   //retornar un nuevo array con la intersección de ambos elementos. (Ej: [4,2,3] unión [1,3,4] = [3,4].
   //Si no tienen elementos en común, retornar un arreglo vacío.
   //Aclaración: los arreglos no necesariamente tienen la misma longitud
-var union =[];
-//var ind = 0;
-for(var i=0 ; arreglo1.length ;i++){
-  for(var j=0 ; arreglo2.length ;j++){
-    //union[ind] += arreglo1[i];
-    if (arreglo1[i] == arreglo2[j]){
-      union.push(arreglo1[i])
-    
-    //  for(var k=0;union.length ;j++){
+
+  var union =[];
+  for( var i=0; i<arreglo1.length; i++ ){
+    for(var j=0 ; j<arreglo2.length ;j++){
+      if (arreglo1[i] === arreglo2[j]){
+        union.push(arreglo1[i]);
+      }
+    }
+
+  }
+  return union;
+}
+
+ //  for(var k=0;union.length ;j++){
       //  if (arreglo1[i] === union[k]){
         //  continue;
           //}else{
           //  union[ind] += arreglo1[i];
           //}
       //}
-    }
-    //break;
-  }
-}
-return union;
-
-}
 
 
 // No modificar nada debajo de esta línea
